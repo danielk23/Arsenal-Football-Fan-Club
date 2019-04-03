@@ -1,0 +1,140 @@
+/*** COMP - NAV ***/
+
+.nav {
+  &_checkbox {
+    display: none;
+  }
+
+  &_button {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 0.4rem;
+    position: fixed;
+    top: 4.2rem;
+    right: 4.2rem;
+    background-color: $color-primary-dark;
+    z-index: 20;
+    box-shadow: 0 0.2rem 0.5rem rgba($color-base-dark, 0.7);
+    text-align: center;
+    cursor: pointer;
+  }
+
+  &_background {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 0.4rem;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    background-image: radial-gradient($color-primary-dark, $color-primary);
+    z-index: 10;
+    transition: transform 1s ease-in-out;
+  }
+
+  &_page {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    width: 0%;
+    opacity: 0;
+    transition: all 0.7s ease-in-out;
+  }
+
+  &_section-list {
+    @include centerElement;
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    }
+
+  &_section {
+    margin: 1rem;
+  }
+
+  &_link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-family: "Lato", sans-serif;
+      font-size: 2rem;
+      font-weight: 100;
+      padding: 1rem 2rem;
+      color: $color-base;
+      text-decoration: none;
+      text-transform: uppercase;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-base 50%);
+      background-size: 230%;
+      transition: all .4s;
+    }
+
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $color-secondary;
+    }
+
+    &:target {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // menu functions
+  // ~ general siblings to select the background
+  &_checkbox:checked ~ &_background {
+    transform: scale(100);
+  }
+
+  &_checkbox:checked ~ &_page {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  //icon burger
+  &_icon {
+    position: relative;
+    margin-top: 2.1rem;
+    &, // icon - middle burger line
+    &::before,
+    &::after {
+      height: 1px;
+      width: 3rem;
+      background-color: $color-base;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s ease-in-out;
+    }
+    &::before {transform: translateY(-0.7rem)};
+    &::after {transform: translateY(0.7rem)};
+
+  }
+
+  &_button:hover &_icon::before {
+    transform: translateY(-0.9rem);
+  }
+
+  &_button:hover &_icon::after {
+    transform: translateY(0.9rem);
+  }
+
+  //icon burger cross on click
+  // when the checkbox is selected we actually select the buttons child using the + (adjacent sibling element)
+  &_checkbox:checked + &_button &_icon {
+    background-color: transparent;
+  }
+
+  &_checkbox:checked + &_button &_icon::before {
+    transform: rotate(135deg);
+  }
+
+  &_checkbox:checked + &_button &_icon::after {
+    transform: rotate(-135deg);
+  }
+
+}

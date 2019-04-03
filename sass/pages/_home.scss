@@ -1,0 +1,187 @@
+/*** HERO-SECTION  ***/
+
+.hero-section {
+  height: 95vh;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.7),
+    rgba($color-primary-dark, 0.7)), 
+    url(../img/hero-stadium.png);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+}
+
+.small-logo-container {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+}
+
+.logo-small {
+  height: 4.5rem;
+}
+
+.logo-small:hover {
+  animation: smallBounce 1s ease-out;
+}
+
+.main-logo-container {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
+.logo-big {
+  height: 50vh;
+  animation-name: grow;
+  animation-duration: 2s;
+  backface-visibility: hidden;
+}
+
+.hero-btn-container {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*** SECTION-WELCOME  ***/
+
+.section-welcome {
+  background-color: $color-base-grey;
+  padding: 25rem 0;
+  margin-top: -20vh;
+}
+
+
+/*** SECTION-FEATURES  ***/
+
+.section-features {
+  padding: 25rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.7),
+    rgba($color-primary-dark, 0.7)), 
+    url(../img/hero-features.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  margin-top: -17rem;
+}
+
+/*** SECTION-PLAN  ***/
+
+.section-plan {
+  background-color: $color-base-grey;
+  padding: 27rem 0;
+  margin-top: -20vh;
+}
+
+/*** SECTION-HISTORY  ***/
+
+.section-history {
+  padding: 25rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.8),
+    rgba($color-primary-dark, 0.8)), 
+    url(../img/chapmans_first_game.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  margin-top: -17rem;
+}
+
+.section-history-container {
+  display: flex;
+}
+
+/*** SECTION-FORM / DONATION  ***/
+
+.section-form {
+  background-color: $color-base-grey;
+  padding: 27rem 0 10rem 0;
+  margin-top: -22vh;
+}
+
+.form-container {
+  margin: 20px auto;
+  width: 80%;
+  background-color: $color-base;
+  padding: 5rem;
+  box-shadow: 0.2rem 0.2rem 0.8rem rgba($color-base-dark, 0.6);
+  border-radius: 0.4rem;
+}
+
+.col-left {
+  float: left;
+  width: 25%;
+  margin-top: 2rem;
+}
+
+.col-right {
+  float: left;
+  width: 50%;
+  margin-top: 2rem;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input[type=password], input[type=text], input[type=email], select {
+  width: 100%;
+  padding: 1rem;
+  border: 0.1rem solid $color-secondary-light;
+  border-radius: 0.4rem;
+}
+
+.col-left > label {
+  padding: 1rem 1rem 0.5  rem 0;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+input[type=submit] {
+  float: right;
+  color: #f2f2f2;
+  cursor: pointer;
+  margin: 2rem 1.5rem 0 1.5rem;
+  font-size: 1rem;
+  background-color: #747474;
+  border-radius: 50px;
+  border: 1px solid $color-secondary-light;
+}
+
+input[type=submit]:hover {
+  background: #151719;
+  box-shadow: none;
+}
+
+
+/*** FOOTER  ***/
+
+.footer {
+  background-color: $color-base-grey-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-footer {
+  height: 20rem;
+  margin: 5rem 0 3rem 0;
+}

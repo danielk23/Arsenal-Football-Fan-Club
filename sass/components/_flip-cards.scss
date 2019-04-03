@@ -1,0 +1,115 @@
+/*** COMP - FLIP_CARDS ***/
+
+.flip-card {
+  // structure - rotation
+  perspective: 120rem;
+  height: 58rem;
+  position: relative;
+
+  &_side {
+    color: $color-base;
+    font-size: 2rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    height: 58rem;
+    transition: all 1s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0.4rem 0.4rem 1.5rem rgba($color-base-dark, 0.6);
+
+    &-front {
+      background-image: linear-gradient(to right bottom, $color-primary, $color-primary-dark);
+    }
+
+    &-back {
+      background-image: linear-gradient(to right bottom, $color-secondary, $color-secondary-light);
+      transform: rotateY(180deg)
+    }
+  }
+
+  &:hover &_side-front {
+  transform: rotateY(-180deg)
+  }
+
+  &:hover &_side-back {
+    transform: rotateY(0deg)
+  }
+
+  // flip card front style
+  &_img {
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+    background-blend-mode: soft-light;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 15% 100%);
+    // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &-1 {
+      background-image: linear-gradient(to right bottom, $color-primary-dark, $color-primary), url(../img/arsenal-plan-young.jpg);
+    }
+    &-2 {
+      background-image: linear-gradient(to right bottom, $color-primary-dark, $color-primary), url(../img/arsenal-plan-fanatic.jpg);
+    }
+    &-3 {
+      background-image: linear-gradient(to right bottom, $color-primary-dark, $color-primary), url(../img/arsenal-plan-vip.jpg);
+    }
+  }
+  
+  &_heading {
+    padding: 2rem 2rem;
+  }
+
+  &_text {
+    padding: 0.5rem 2rem;
+    
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+
+      li {
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 1px dashed $color-base;
+        }
+      }
+    }
+  }
+
+  // flip card back style
+  &_container {
+    @include centerElement;
+    width: 90%;
+  }
+  
+  &_price-details {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    color: $color-base;
+    margin-bottom: 8rem;
+  }
+
+  &_price-only {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    font-weight: 100;
+  }
+
+  &_price-value {
+    font-size: 8rem;
+    font-weight: 100;
+    padding-bottom: 6rem;
+  }
+
+  &_price-conditions {
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding-top: 2rem;
+  }
+}

@@ -1,0 +1,68 @@
+/*** TYPOGRAPHY ***/
+
+body {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 2.5rem;
+  color: $color-secondary;
+  padding: 2rem;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+.btn {
+  font-size: 1.3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+.section-heading {
+  font-size: 4rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  display: inline-block;
+  color: $color-primary-dark;
+
+  &_white {
+    color: $color-base;
+  }
+}
+
+.section-subheading {
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 1.5rem;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+.btn-text {
+  font-size: 1.5rem;
+}
+
+.section-history {
+  color: $color-base;
+}
+
+footer p {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  line-height: 2rem;
+  padding-bottom: 2rem;
+}

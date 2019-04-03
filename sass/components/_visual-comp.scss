@@ -1,0 +1,69 @@
+/*** COMP - VISUAL/IMAGES ***/
+
+.visual-comp {
+  position: relative;
+
+  &__image {
+    width: 65%;
+    box-shadow: 0 1rem 2.5rem rgba($color-base-dark, 0.4);
+    border-radius: 0.4rem;
+    position: absolute;
+    z-index: 4;
+    transition: all 0.4s;
+  
+    &--img1 {
+      left: 0;
+      top: -1rem;
+    }
+    &--img2 {
+      right: 0;
+      top: 5rem;
+      z-index: 5;
+    }
+    &--img3 {
+      left: 20%;
+      top: 15rem;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem) rotate(2deg);
+      z-index: 6;
+      box-shadow: 0 2rem 2.5rem rgba($color-base-dark, 0.4);
+    }
+
+  }
+}
+
+.visual-comp-history {
+  position: relative;
+
+  &__image {
+    width: 65%;
+    box-shadow: 0 1rem 2.5rem rgba($color-base-dark, 0.4);
+    border-radius: 0.4rem;
+    position: absolute;
+    z-index: 4;
+    transition: all 0.4s;
+  
+    &--img1 {
+      left: 0;
+      top: -1rem;
+    }
+    &--img2 {
+      right: 10%;
+      top: 5rem;
+      z-index: 5;
+    }
+    &--img3 {
+      right: 23%;
+      top: 15rem;
+    }
+
+    &:hover {
+      transform: scale(1.05) translateY(-0.5rem) rotate(2deg);
+      z-index: 6;
+      box-shadow: 0 2rem 2.5rem rgba($color-base-dark, 0.4);
+    }
+
+  }
+}
